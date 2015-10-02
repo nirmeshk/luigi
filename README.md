@@ -30,3 +30,7 @@ tox -e py27-nonhdfs
 #### The ability to determine failure or success of a build job, and as a result trigger an external event (run post-build task, send email, etc).
 - We have configured Jenkins to send the failure reports via email.
 - ![Post build](images/post-build.png)
+
+#### The ability to track and display a history of past builds (a simple list works) via http.
+- This is supported by Jenkins
+- ![Build status](images/build-status.png)
