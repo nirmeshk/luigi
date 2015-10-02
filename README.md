@@ -41,11 +41,11 @@ tox -e py27-nonhdfs
 - ![Build status](images/build-status.png)
 
 ### Screencasts
-#####Below is an example of pushing a staged commit to repository that results in a failing build to branch `brokenBranch`:
+Below is an example of pushing a staged commit to the repository that results in a failing build at branch `brokenBranch`:
 ![Pushing to failure](images/step1.gif)
 
 The failed build results in an email being sent to all emails set in the Jenkins configuration.
 ![Pushing to failure](images/step2.gif)
 
-#####Below is an example of a clean commit and push to a stable build to branch `milestone-1`:
+Below is an example of a clean commit and push to a stable build at branch `milestone-1`:
 ![Pushing to failure](images/stableBuild.gif)
