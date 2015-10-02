@@ -33,8 +33,8 @@ tox -e py27-nonhdfs
 
 #### The ability to have multiple jobs corresponding to multiple branches in a repository. Specifically, a commit to a branch, `release`, will trigger a `release build job`. A commit to a branch, `dev`, will trigger a `dev build job`.
 - When we push to a branch on the repository, the specific branch is checked out for the build process.
-- ![Checkout master](images/build-master.png)
-- ![Checkout milestone-1](images/build-m1.png)
+- <img src="https://github.com/nirmeshk/luigi/blob/milestone-1/images/build-m1.png" width="500px">
+- <img src="https://github.com/nirmeshk/luigi/blob/milestone-1/images/build-master.png" width="500px">
 
 #### The ability to track and display a history of past builds (a simple list works) via http.
 - This is supported by Jenkins
