@@ -14,7 +14,7 @@ Before we use our build management tools, we need to set up a server to handle t
 - ![Webhook](images/webhook.png)
 
 #### The ability to execute a build job via a script or build manager (e.g., shell, maven), which ensures a clean build each time.:
-- In Jenkins we have following commands to ensure clean build:
+- In Jenkins we set up a build script with the following commands to ensure clean build:
 ```shell
 #!/bin/bash
 echo ${GIT_BRANCH#*/}
