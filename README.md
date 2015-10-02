@@ -4,7 +4,7 @@
 - Trey Moore (dtmoore3@ncsu.edu)
 
 ### Provision & Set Up Jenkins Server
-Before we use our build management tools, we need to set up a server to handle the Github webhooks and and make sure that all the required dependencies are installed on the server. For this milestone, we elected to use Jenkins CI server to manage the builds after any repository changes. To provision a server on Digitalocean run <code>provisionServers.js</code> and then run <code>buildInventory.js</code> to generate a file with the public IP address of the server. You can then ssh into your new droplet on a machine with an authorized key pair. Once you are in the server, simply run the <code>installJenkins.sh</code> file to initialize your build management environment
+Before we use our build management tools, we need to set up a server to handle the Github webhooks and and make sure that all the required dependencies are installed on the server. For this milestone, we elected to use Jenkins CI server to manage the builds after any repository changes. To provision a server on Digitalocean, navigate to the setup folder to run <code>provisionServers.js</code> and then run <code>buildInventory.js</code> to generate a file with the public IP address of the server. You can then ssh into your new droplet on a machine with an authorized key pair. Once you are in the server, simply run the <code>installJenkins.sh</code> file to initialize your build management environment
 
 
 ### Build section
