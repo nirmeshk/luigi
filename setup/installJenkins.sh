@@ -8,4 +8,7 @@ apt-get install -y sendmail
 
 apt-get install -y jenkins
 apt-get install -y git
+apt-get install -y python-dev
+apt-get install -y python-virtualenv
+apt-get install -y python-pip
 /etc/init.d/jenkins start
