@@ -107,6 +107,17 @@ Advanced Testing Technique - 20%
 
 Base Analysis - 20%
 --------------------
+- In order to run the base analysis, the project uses flake8. 
+- flake8 is a wrapper around
+    + PyFlakes (For finding bugs)
+    + pep8 (for Style guide violations)
+    + Ned Batchelder’s McCabe script (for cyclometic complexity)
+- In order to run the flake8 analysis, run `tox -e flake8`
+
+- Output:
+- ![flake 8 without warning](images/flake8_base_1.png)
+- Output with some warnings
+- ![flake 8 with warnings](images/flake8_base_2.png)
 
 Extended Analysis - 10%
 -------------------------
