@@ -45,6 +45,6 @@ def newWeird(x,y,z, mode):
         if mode == "strictly":
             return 0
     else:
-        if mode != "stricter":
+        if mode != "stricter": #Some random comment
             return z / x;
     return 1
