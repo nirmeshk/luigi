@@ -23,3 +23,11 @@ def asin(x):
 
 def inc(x):
     return x+1
+
+def gcd(a,b):
+    while a != b:
+        if a > b:
+            a -= b
+        else:
+            b -= a
+    return b
