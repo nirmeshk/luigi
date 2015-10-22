@@ -117,7 +117,7 @@ Base Analysis - 20%
 - Output:
 - ![flake 8 without warning](images/flake8_base_1.png)
 - Output with some warnings
-- ![flake 8 with warnings](images/flake8_base_2.png)
+- ![flake 8 with warnings](images/flake8_base_2.png.png)
 
 Extended Analysis - 10%
 -------------------------
