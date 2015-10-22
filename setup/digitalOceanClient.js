@@ -5,7 +5,7 @@ var config = JSON.parse(fs.readFileSync("digitalOceanConfig.json", "utf8"));
 var headers =
 {
     'Content-Type':'application/json',
-    Authorization: 'Bearer ' + config.token
+    'Authorization': 'Bearer ' + config.token
 };
 
 exports.digitalOceanClient =
