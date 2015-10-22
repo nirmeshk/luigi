@@ -9,6 +9,7 @@ Unit Tests and Coverage - 20%
 --------------------------------
 
 - Here is the coverage report of the project. 
+- In order to generate this, run `tox -e py27-nonhdfs`
 
 ```
 Name                                   Stmts   Miss  Cover   Missing
