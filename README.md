@@ -8,6 +8,8 @@
 Unit Tests and Coverage - 20%
 --------------------------------
 
+- Here is the coverage report of the project. 
+
 ```
 Name                                   Stmts   Miss  Cover   Missing
 --------------------------------------------------------------------
