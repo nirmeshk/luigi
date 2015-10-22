@@ -1,7 +1,7 @@
 #!/bin/sh
 # To enable this hook, copy it into .git/hooks/pre-commit in your project's workspace
 # or use the reinstall-git-hook-everywhere.sh script
-# found at https://gist.github.com/jfuerth/43570af79947eec68581
+# found at https://gist.github.com/jfuerth/43570af79947eec68581 and extended for DigitalOcean credentials
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
