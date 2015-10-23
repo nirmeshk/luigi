@@ -137,6 +137,8 @@ Testing Gate - 10%
 
 Analysis Gate - 10%
 --------------------
+- The second tox command in pre-push 'tox -e flake8' checks that there are no warnings in the static analysis.
 
 Security Token Gate - 10%
 -------------------------
+- The pre-commit hook checks that no aws or digital ocean keys and pem files are in the recent git diff. If it detects these things exist, it will reject the commit. This can be overridden with the --no-verify flag on git commit.
