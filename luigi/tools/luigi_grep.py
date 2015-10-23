@@ -37,9 +37,6 @@ class LuigiGrep(object):
 
     def prefix_search(self, job_name_prefix):
         """searches for jobs matching the given job_name_prefix."""
-        f = open('abcd.txt', 'w+')
-        f.write('ugh')
-        f.close()
         json = self._fetch_json()
         jobs = json['response']
         for job in jobs:
