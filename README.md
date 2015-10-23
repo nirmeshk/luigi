@@ -104,6 +104,11 @@ TOTAL                                   8396   2604    69%
 
 Advanced Testing Technique - 20%
 --------------------------------
+We used [hypothesis](https://hypothesis.readthedocs.org/en/latest/index.html) to test luigi_grep. This test file is available at <code>test/luigi_grep_test.py</code>. It runs tests using a specific type of input, in this case text, to try to find examples that break the test. Additionally you can specify assumptions about the input, so that it doesn't fail on inapplicable examples. This is a property based testing tool.
+The coverage increased from 24% to 45% in the file under test.
+![coverage one](/images/luigi_grep_coverage_1.png)
+![coverage two](/images/luigi_grep_coverage_2.png)
+
 
 Base Analysis - 20%
 --------------------
@@ -127,12 +132,18 @@ Extended Analysis - 10%
 - Here is a gif demostrating the plugin:
     + First, I run the analysis by passing `--min-code-comment-ratio=0.00`, so that there will be no warnings.
     + Next, I run the analysis by increasing the threshold to 5%, so that some of the files will fail the analysis.
+    
+![Flake8 gif](http://i.imgur.com/buspI2G.gif)
 
 Testing Gate - 10%
 --------------------
+ ![Testing Gate](https://i.imgur.com/3C0CF7t.gif)
+- This pre-push hook rejects the push if code coverage falls below a certain value
 
 Analysis Gate - 10%
 --------------------
+- The second tox command in pre-push 'tox -e flake8' checks that there are no warnings in the static analysis.
 
 Security Token Gate - 10%
 -------------------------
+- The pre-commit hook checks that no aws or digital ocean keys and pem files are in the recent git diff. If it detects these things exist, it will reject the commit. This can be overridden with the --no-verify flag on git commit.
