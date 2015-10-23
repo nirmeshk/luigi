@@ -139,7 +139,7 @@ Testing Gate - 10%
 --------------------
 - We have implemented this in a pre-push hook. The content can be found in `setup/pre-push.sh` 
 - The hook rejects the push if code coverage falls below a certain value.
- ![Testing Gate](https://i.imgur.com/3C0CF7t.gif)
+ ![Testing Gate](http://i.imgur.com/wmY2d3D.gif?1)
 
 
 Analysis Gate - 10%
