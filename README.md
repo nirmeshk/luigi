@@ -129,7 +129,7 @@ Testing Gate - 10%
 
 Analysis Gate - 10%
 --------------------
-- ![Fails to push when code coverage falls below a certain value](https://imgur.com/3C0CF7t)
+- ![Fails to push when code coverage falls below a certain value](http://i.imgur.com/3C0CF7t.gifv)
 - We made a pre-push hook that runs all the tests and rejects the push if the code coverage falls below a given value.
 
 Security Token Gate - 10%
