@@ -3,7 +3,7 @@ Running the tests
 
 We are always happy to recieve Pull Requests. When you open a PR, it will
 automatically build on Travis. So you're not strictly required to test the
-patch locally before submitting it.
+patch locally   before submitting it.
 
 If you do want to run the tests locally you'll need to ``pip install tox`` and
 then run one of the tox commands below.
