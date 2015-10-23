@@ -105,7 +105,7 @@ TOTAL                                   8396   2604    69%
 Advanced Testing Technique - 20%
 --------------------------------
 We used [hypothesis](https://hypothesis.readthedocs.org/en/latest/index.html) to test luigi_grep. This test file is available at <code>test/luigi_grep_test.py</code>. It runs tests using a specific type of input, in this case text, to try to find examples that break the test. Additionally you can specify assumptions about the input, so that it doesn't fail on inapplicable examples. This is a property based testing tool.
-The coverage increased from 24% to 59% in the file under test.
+The coverage increased from 24% to 45% in the file under test.
 ![coverage one](/images/luigi_grep_coverage_1.png)
 ![coverage two](/images/luigi_grep_coverage_2.png)
 
