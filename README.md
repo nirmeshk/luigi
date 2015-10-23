@@ -104,6 +104,8 @@ TOTAL                                   8396   2604    69%
 
 Advanced Testing Technique - 20%
 --------------------------------
+We used hypothesis [hypothesis docs](https://hypothesis.readthedocs.org/en/latest/index.html) to test luigi_grep. This test file is available at test/luigi_grep_test.py. It runs tests using a specific type of input, in this case text, to try to find examples that break the test. Additionally you can specify assumptions about the input, so that it doesn't fail on inapplicable examples
+
 
 Base Analysis - 20%
 --------------------
