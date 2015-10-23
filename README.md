@@ -137,12 +137,15 @@ Extended Analysis - 10%
 
 Testing Gate - 10%
 --------------------
+- We have implemented this in a pre-push hook. The content can be found in `setup/pre-push.sh` 
+- The hook rejects the push if code coverage falls below a certain value.
  ![Testing Gate](https://i.imgur.com/3C0CF7t.gif)
-- This pre-push hook rejects the push if code coverage falls below a certain value
+
 
 Analysis Gate - 10%
 --------------------
-- The second tox command in pre-push 'tox -e flake8' checks that there are no warnings in the static analysis.
+- This is also handled in pre-push hook.
+- The command 'tox -e flake8' checks that there are no warnings in the static analysis. If there are any, the push will fail.
 ![ALt text](http://i.imgur.com/3Nvv7Rl.gif)
 
 Security Token Gate - 10%
