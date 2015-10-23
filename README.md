@@ -104,6 +104,8 @@ TOTAL                                   8396   2604    69%
 
 Advanced Testing Technique - 20%
 --------------------------------
+- For increased code coverage we employed the use of a python fuzzing library named [Hypothesis](http://hypothesis.readthedocs.org/en/latest/) . It works by letting you write tests that assert that something should be true for every case, not just the ones you happen to think of.
+    + 
 
 Base Analysis - 20%
 --------------------
@@ -130,3 +132,4 @@ Analysis Gate - 10%
 
 Security Token Gate - 10%
 -------------------------
+We've included the pre-commit hook below to prevent developers from committing AWS credentials, Digital Ocean keys and .pem files for ssh access: 
