@@ -143,6 +143,7 @@ Testing Gate - 10%
 Analysis Gate - 10%
 --------------------
 - The second tox command in pre-push 'tox -e flake8' checks that there are no warnings in the static analysis.
+![ALt text](http://i.imgur.com/3Nvv7Rl.gif)
 
 Security Token Gate - 10%
 -------------------------
