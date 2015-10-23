@@ -104,8 +104,6 @@ TOTAL                                   8396   2604    69%
 
 Advanced Testing Technique - 20%
 --------------------------------
-- For increased code coverage we employed the use of a python fuzzing library named [Hypothesis](http://hypothesis.readthedocs.org/en/latest/) . It works by letting you write tests that assert that something should be true for every case, not just the ones you happen to think of.
-    + 
 
 Base Analysis - 20%
 --------------------
@@ -116,22 +114,25 @@ Base Analysis - 20%
     + Ned Batchelder’s McCabe script (for cyclometic complexity)
 - In order to run the flake8 analysis, run `tox -e flake8`
 
-- Output:
+- Output (Ignoring build/ , six.py and doc/ folder):
 - ![flake 8 without warning](images/flake8_base_1.png)
-- Output with some warnings
+- Output with some warnings (if we don't ignore six.py file, it gives some warning):
 - ![flake 8 with warnings](images/flake8_base_2.png.png)
 
 Extended Analysis - 10%
 -------------------------
+- Flake8 allows us to write pluggins with custom analysis. I have created a plugin https://github.com/nirmeshk/flake8-comment-ratio
+- In `tox.ini` files, I added this plugin installation in the flake8 enviornment. As a result of this, now when we run `tox -e flake8`, it also runs the flake8-comment-ratio plugin along with the origional analysis.
+- We can also pass the threshold of comment-to-code ratio from command line using `--min-code-comment-ratio=0.05`
+- Here is a gif demostrating the plugin:
+    + First, I run the analysis by passing `--min-code-comment-ratio=0.00`, so that there will be no warnings.
+    + Next, I run the analysis by increasing the threshold to 5%, so that some of the files will fail the analysis.
 
 Testing Gate - 10%
 --------------------
 
 Analysis Gate - 10%
 --------------------
-- ![Fails to push when code coverage falls below a certain value](http://i.imgur.com/3C0CF7t.gif)
-- We made a pre-push hook that runs all the tests and rejects the push if the code coverage falls below a given value.
 
 Security Token Gate - 10%
 -------------------------
-We've included the pre-commit hook below to prevent developers from committing AWS credentials, Digital Ocean keys and .pem files for ssh access: 
