@@ -132,6 +132,7 @@ Testing Gate - 10%
 --------------------
  ![Testing Gate](https://i.imgur.com/3C0CF7t.gif)
 - This pre-push hook rejects the push if code coverage falls below a certain value
+
 Analysis Gate - 10%
 --------------------
 
