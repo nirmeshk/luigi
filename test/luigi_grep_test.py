@@ -12,8 +12,8 @@ class MyUrlOpen(object):
         self.jobs = jobs
 
     def read(self):
-        return json.dumps({'status_code': 200,
-            'response': json.dumps(self.jobs)})
+        return json.dumps({'status_code': 200, 'response': json.dumps(self.jobs)})
+
 
 class TestLuigiGrep(unittest.TestCase):
 
@@ -23,10 +23,11 @@ class TestLuigiGrep(unittest.TestCase):
     @given(text())
     def test_prefix_search(self, name_prefix):
         assume(len(name_prefix) > 1)
-        job = {"deps":["HTTMock", "hypothesis"], "status": "UNKNOWN", "name": name_prefix}
-        jobs = {name_prefix:job}
+        job = {"deps": ["HTTMock", "hypothesis"], "status": "UNKNOWN", "name": name_prefix}
+        jobs = {name_prefix: job}
 
-        def f(url) : return MyUrlOpen(jobs)
+        def f(url):
+            return MyUrlOpen(jobs)
         luigi_grep.urlopen = f
 
         results = self.grep.prefix_search(name_prefix)
