@@ -129,6 +129,8 @@ Extended Analysis - 10%
 - Here is a gif demostrating the plugin:
     + First, I run the analysis by passing `--min-code-comment-ratio=0.00`, so that there will be no warnings.
     + Next, I run the analysis by increasing the threshold to 5%, so that some of the files will fail the analysis.
+    
+![Flake8 gif](http://i.imgur.com/buspI2G.gif)
 
 Testing Gate - 10%
 --------------------
