@@ -151,3 +151,4 @@ Analysis Gate - 10%
 Security Token Gate - 10%
 -------------------------
 - The pre-commit hook checks that no aws or digital ocean keys and pem files are in the recent git diff. If it detects these things exist, it will reject the commit. This can be overridden with the --no-verify flag on git commit.
+- ![Security Gate](http://i.imgur.com/QkHGgkb.gif)
