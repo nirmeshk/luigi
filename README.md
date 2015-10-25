@@ -148,11 +148,12 @@ Testing Gate - 10%
 
 Analysis Gate - 10%
 --------------------
-- This is also handled in pre-push hook.
+- This is also handled in pre-push hook. The content can be found in `setup/pre-push.sh`
 - The command 'tox -e flake8' checks that there are no warnings in the static analysis. If there are any, the push will fail.
 ![ALt text](http://i.imgur.com/3Nvv7Rl.gif)
 
 Security Token Gate - 10%
 -------------------------
+- This is implemented as pre-commit hook. The reason beig - once the content is commited, it remains in the history even if you correct that. The code can be found at `setup/pre-commit.sh`
 - The pre-commit hook checks that no aws or digital ocean keys and pem files are in the recent git diff. If it detects these things exist, it will reject the commit. This can be overridden with the --no-verify flag on git commit.
 - ![Security Gate](http://i.imgur.com/QkHGgkb.gif)
